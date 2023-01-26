@@ -1,4 +1,4 @@
-/* DATA CLEANING SQL QUERIES of the Vancouver Business Licences*/
+/* DATA CLEANING SQL QUERIES of the Vancouver Business Licences Dataset*/
 
 SELECT *
 FROM business_licence
