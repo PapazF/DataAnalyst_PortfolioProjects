@@ -15,7 +15,7 @@ FROM job_postings;
 
 /* Number of Job Postings, Number of Applicants by Job Title with grand totals */
 SELECT 
-	COALESCE(JobTitle,'Grand Total') AS JobTitle, 
+    COALESCE(JobTitle,'Grand Total') AS JobTitle, 
     COUNT(JobPostingID) AS num_job_postings, 
     SUM(NumberApplicants) AS num_applicants
 FROM job_postings
@@ -26,7 +26,7 @@ GROUP BY JobTitle WITH ROLLUP;
 
 /* Average years of Experience based on the Job Level */
 SELECT
-	JobPositionLevel, 
+    JobPositionLevel, 
     ROUND(AVG(YearsExperience),2) AS avg_years_experiance
 FROM job_postings
 WHERE JobTitle IN ('Data Analyst','Data Scientist','Data Science Manager', 'Data Engineer')
@@ -37,7 +37,7 @@ ORDER BY avg_years_experiance;
 
 /* Number of Job Postings and number of Applicants per Industry */
 SELECT 
-	CompanyIndustry, 
+    CompanyIndustry, 
     COUNT(*) AS num_jobs, 
     SUM(NumberApplicants) AS num_applicants
 FROM job_postings
@@ -49,7 +49,7 @@ ORDER BY num_jobs DESC;
 
 /* Get the Minimum and Maximum salary by JobTitle */
 SELECT 
-	JobTitle, 
+    JobTitle, 
     MIN(MinimumPay) AS min_salary,
     MAX(MaximumPay) AS max_salary
 FROM job_postings
@@ -60,7 +60,7 @@ GROUP BY JobTitle;
 
 /* Average Salary based on the Job Title */
 SELECT 
-	JobTitle, 
+     JobTitle, 
     (MinimumPay+MaximumPay)/2 AS avg_salary
 FROM job_postings
 WHERE JobTitle IN ('Data Analyst','Data Scientist','Data Science Manager', 'Data Engineer')
@@ -71,7 +71,7 @@ ORDER BY avg_salary DESC;
 
 /* Top 5 months with the most Job Postings */
 SELECT 
-	MONTH(JobPostingDate) AS month, 
+    MONTH(JobPostingDate) AS month, 
     COUNT(*) AS num_jobs
 FROM job_postings
 WHERE JobTitle IN ('Data Analyst','Data Scientist','Data Science Manager', 'Data Engineer')
@@ -94,14 +94,13 @@ AND JobSkills LIKE '%tableau%');
 /* Compere Tableau with Power BI based on the Number of Job Postings */
 WITH tablea_vs_power_bi AS (
 SELECT COUNT(*) AS tableau_jobs, 
-		(SELECT COUNT(*)
-		FROM job_postings
-		WHERE JobSkills LIKE '%power_bi%'
-		AND JobSkills NOT LIKE '%tableau%') AS power_bi_jobs
+	(SELECT COUNT(*)
+	FROM job_postings
+	WHERE JobSkills LIKE '%power_bi%'
+	AND JobSkills NOT LIKE '%tableau%') AS power_bi_jobs
 FROM job_postings
 WHERE JobSkills LIKE '%tableau%'
 AND JobSkills NOT LIKE '%power_bi%')
-SELECT 
-	tableau_jobs - power_bi_jobs
-	FROM tablea_vs_power_bi;
+SELECT tableau_jobs - power_bi_jobs
+FROM tablea_vs_power_bi;
     
