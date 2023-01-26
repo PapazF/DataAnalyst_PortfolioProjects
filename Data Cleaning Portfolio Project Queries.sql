@@ -11,10 +11,10 @@ MODIFY COLUMN FolderYear YEAR;
 /* Had some missing values in the column TradeName (Name under which business is usually conducted), 
 used column BusinessName (The ownership of the business) to populate missing values */
 SELECT 
-	BusinessName, 
+    BusinessName, 
     TradeName,
     CASE WHEN TradeName = '' THEN BusinessName
-		ELSE TradeName END AS BusinessTradeName
+    ELSE TradeName END AS BusinessTradeName
 FROM business_licence;
 
 ALTER TABLE business_licence
@@ -22,7 +22,7 @@ ADD BusinessTradeName varchar(150);
 
 UPDATE business_licence
 SET BusinessTradeName =  CASE WHEN TradeName = '' THEN BusinessName
-						ELSE TradeName END;
+		         ELSE TradeName END;
                         
 ALTER TABLE business_licence
 MODIFY COLUMN BusinessTradeName varchar(150) AFTER TradeName; -- Change column position
@@ -34,7 +34,7 @@ SET IssuedDate = DATE(IssuedDate);
 /* Had some missing values in the column SubType(Sub-category(s) of the main business type), 
 used column BusinessType(Description of the business activity) to populate missing values */
 SELECT 
-	BusinessType,
+    BusinessType,
     SubType,
     CASE WHEN SubType = '' THEN BusinessType
     ELSE SubType END AS BusinessSubType
@@ -45,14 +45,14 @@ ADD COLUMN BusinessSubType varchar(150);
 
 UPDATE business_licence
 SET BusinessSubType = CASE WHEN SubType = '' THEN BusinessType
-					ELSE SubType END;
+		      ELSE SubType END;
                     
 ALTER TABLE business_licence
 MODIFY COLUMN BusinessSubType varchar(150) AFTER SubType; -- Change column position
 
 -- Breaking out BusinessAddress('MAIN ST, Vancouver, BC V5T 3C9') into induvidual columns (Street,City,Province,PostalCode)
 SELECT 
-	BusinessAddress,
+    BusinessAddress,
     SUBSTRING_INDEX(BusinessAddress,',',1) AS Street,
     TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(BusinessAddress,',',2),',',-1)) AS City,
     TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(BusinessAddress,',',-1),' ',2)) AS Province, -- Had one sigle space after comma ', BC V5T 3C9'
@@ -88,7 +88,7 @@ SET PostalCode = SUBSTRING_INDEX(SUBSTRING_INDEX(BusinessAddress,',',-1),' ',-2)
 
 -- Check for Duplicates
 WITH RowNum AS (
-SELECT *,
+  SELECT *,
 	ROW_NUMBER() OVER 
 	(PARTITION BY LicenceRSN, LicenceNumber
 	ORDER BY LicenceRSN) row_num
