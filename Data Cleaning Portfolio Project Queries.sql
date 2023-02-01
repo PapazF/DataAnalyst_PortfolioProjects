@@ -50,7 +50,7 @@ SET BusinessSubType = CASE WHEN SubType = '' THEN BusinessType
 ALTER TABLE business_licence
 MODIFY COLUMN BusinessSubType varchar(150) AFTER SubType; -- Change column position
 
--- Breaking out BusinessAddress('MAIN ST, Vancouver, BC V5T 3C9') into induvidual columns (Street,City,Province,PostalCode)
+-- Breaking out BusinessAddress('MAIN ST, Vancouver, BC V5T 3C9') into individual columns (Street,City,Province,PostalCode)
 SELECT 
     BusinessAddress,
     SUBSTRING_INDEX(BusinessAddress,',',1) AS Street,
