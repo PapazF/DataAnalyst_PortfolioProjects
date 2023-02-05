@@ -13,7 +13,7 @@ SELECT COUNT(*)
 FROM job_postings;
 
 
-/* Number of Job Postings, Number of Applicants by Job Title with grand totals */
+/* Number of Job Postings, Number of Applicants by Job Title with Grand Totals */
 SELECT 
     COALESCE(JobTitle,'Grand Total') AS JobTitle, 
     COUNT(JobPostingID) AS num_job_postings, 
