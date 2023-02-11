@@ -91,17 +91,37 @@ WHERE JobTitle IN ('Data Analyst','Data Scientist','Data Science Manager', 'Data
 AND JobSkills LIKE '%tableau%');
 
 
-/* Difference between the number of job postings that require only Tableau skills 
-   and the number of job postings that require only Power BI skills */
-WITH tablea_vs_power_bi AS (
-SELECT COUNT(*) AS tableau_jobs, 
-	(SELECT COUNT(*)
-	FROM job_postings
-	WHERE JobSkills LIKE '%power_bi%'
-	AND JobSkills NOT LIKE '%tableau%') AS power_bi_jobs
+/* Tableau VS Power_Bi */
+ 
+CREATE VIEW power_bi AS (
+SELECT 
+    JobTitle,
+    COUNT(*) AS power_bi_num_jobs,
+    MIN(MinimumPay) AS power_bi_min_salary,
+    MAX(MaximumPay) AS power_bi_max_salary,
+    (MinimumPay+MaximumPay)/2 AS power_bi_avg_salary
 FROM job_postings
-WHERE JobSkills LIKE '%tableau%'
-AND JobSkills NOT LIKE '%power_bi%')
-SELECT tableau_jobs - power_bi_jobs
-FROM tablea_vs_power_bi;
-    
+WHERE JobTitle IN ('Data Analyst','Data Scientist','Data Science Manager', 'Data Engineer')
+    AND JobSkills LIKE '%power_bi%'
+    AND JobSkills NOT LIKE '%tableau%'
+GROUP BY JobTitle
+);
+
+CREATE VIEW tableau AS (
+SELECT 
+    JobTitle,
+    COUNT(*) AS tableau_num_jobs,
+    MIN(MinimumPay) AS tableau_min_salary,
+    MAX(MaximumPay) AS tableau_max_salary,
+    (MinimumPay+MaximumPay)/2 AS tableau_avg_salary
+FROM job_postings
+WHERE JobTitle IN ('Data Analyst','Data Scientist','Data Science Manager', 'Data Engineer')
+     AND JobSkills LIKE '%tableau%'
+     AND JobSkills NOT LIKE '%power_bi%'
+GROUP BY JobTitle
+);
+
+SELECT *
+FROM tableau
+INNER JOIN power_bi
+USING(JobTitle)
