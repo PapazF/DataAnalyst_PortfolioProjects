@@ -8,3 +8,5 @@ MySQL data analysis project for exploring the publicly available [Airbnb dataset
 - distribution of listing prices 
 - summary statistics about different neighbourhoods
 - most dominant property and room types
+
+[Tableau Vancovuer Airbnb Project](https://public.tableau.com/app/profile/filip.papaz/viz/VancouverAirbnbDataAnalysis/Dashboard3) 
