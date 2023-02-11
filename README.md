@@ -33,7 +33,7 @@ MySQL data analysis project for analyzing data-related jobs (Data Analyst, Data 
 -  summary statistics for each job title
 -  tableau vs power bi 
 
-[Tableau Job Market Project](https://public.tableau.com/app/profile/filip.papaz/viz/TableauFocusedJobsAnalysis/JobAnalytics)
+[Tableau Job Market Project](https://public.tableau.com/app/profile/filip.papaz/viz/TableauFocusedJobsAnalysis/JobAnalytics | width=100)
 
 
 
