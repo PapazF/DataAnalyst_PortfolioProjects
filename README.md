@@ -11,7 +11,7 @@ MySQL data analysis project for exploring the publicly available [Airbnb dataset
 
 [Tableau Vancouver Airbnb Project](https://public.tableau.com/app/profile/filip.papaz/viz/VancouverAirbnbDataAnalysis/Dashboard3) 
 
-## [Vancouver Business Licences](https://github.com/PapazF/PortfolioProjects/blob/main/Data%20Cleaning%20Project%20-%20Vancouver%20Business%20Licences.sql)
+## [Vancouver Business Licences Project](https://github.com/PapazF/PortfolioProjects/blob/main/Data%20Cleaning%20Project%20-%20Vancouver%20Business%20Licences.sql)
 
 MySQL data cleaning project for further analysis of publicly available [Vancouver Business Licences dataset](https://opendata.vancouver.ca/explore/?refine.theme=Business+and+economy&disjunctive.features&disjunctive.theme&disjunctive.keyword&disjunctive.data-owner&disjunctive.data-team&sort=modified)
 
