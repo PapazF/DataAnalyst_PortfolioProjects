@@ -17,6 +17,6 @@ MySQL data cleaning project for further analysis of publicly available [Vancouve
 
 - standardize the date format
 - populate the missing values
-- breaking down the column into individual columns
-- cheking for duplicates
+- breaking down singe column into multiple columns
+- checking for duplicates
 - removing unused columns
