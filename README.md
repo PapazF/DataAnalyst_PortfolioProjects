@@ -10,3 +10,7 @@ MySQL data analysis project for exploring the publicly available [Airbnb dataset
 - most dominant property and room types
 
 [Tableau Vancouver Airbnb Project](https://public.tableau.com/app/profile/filip.papaz/viz/VancouverAirbnbDataAnalysis/Dashboard3) 
+
+### [Vancouver Business Licences](https://github.com/PapazF/PortfolioProjects/blob/main/Data%20Cleaning%20Project%20-%20Vancouver%20Business%20Licences.sql)
+
+MySQL data cleaning project for further analysis of publicly available [Vancouver Business Licences dataset](https://opendata.vancouver.ca/explore/?refine.theme=Business+and+economy&disjunctive.features&disjunctive.theme&disjunctive.keyword&disjunctive.data-owner&disjunctive.data-team&sort=modified)
