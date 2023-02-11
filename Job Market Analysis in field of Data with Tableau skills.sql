@@ -13,7 +13,7 @@ SELECT COUNT(*)
 FROM job_postings;
 
 
-/* Number of Job Postings, Number of Applicants by Job Title with Grand Totals */
+/* Number of Job Postings and Number of Applicants for Job Title with Grand Totals */
 SELECT 
     COALESCE(JobTitle,'Grand Total') AS JobTitle, 
     COUNT(JobPostingID) AS num_job_postings, 
@@ -24,7 +24,7 @@ AND JobSkills LIKE '%tableau%'
 GROUP BY JobTitle WITH ROLLUP;
 
 
-/* Average years of Experience based on the Job Level */
+/* Average years of Experience for each Position Level */
 SELECT
     JobPositionLevel, 
     ROUND(AVG(YearsExperience),2) AS avg_years_experiance
@@ -47,7 +47,7 @@ GROUP BY CompanyIndustry
 HAVING num_jobs>100
 ORDER BY num_jobs DESC;
 
-/* Get the Minimum and Maximum salary by JobTitle */
+/* Get the Minimum and Maximum salary for JobTitle */
 SELECT 
     JobTitle, 
     MIN(MinimumPay) AS min_salary,
@@ -58,7 +58,7 @@ AND JobSkills LIKE '%tableau%'
 GROUP BY JobTitle;
 
 
-/* Average Salary based on the Job Title */
+/* Average Salary for each Job Title */
 SELECT 
      JobTitle, 
     (MinimumPay+MaximumPay)/2 AS avg_salary
@@ -81,7 +81,7 @@ ORDER BY num_jobs DESC
 LIMIT 5;
 
 
-/* Total Number of Jobs (excluding Data related jobs) */
+/* Number of Jobs (excluding Data related jobs) */
 SELECT COUNT(*)
 FROM job_postings
 WHERE JobTitle NOT IN (
@@ -91,7 +91,8 @@ WHERE JobTitle IN ('Data Analyst','Data Scientist','Data Science Manager', 'Data
 AND JobSkills LIKE '%tableau%');
 
 
-/* Compere Tableau with Power BI based on the Number of Job Postings */
+/* Difference between the number of job postings that require only Tableau skills 
+   and the number of job postings that require only Power BI skills */
 WITH tablea_vs_power_bi AS (
 SELECT COUNT(*) AS tableau_jobs, 
 	(SELECT COUNT(*)
