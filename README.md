@@ -37,7 +37,7 @@ MySQL data analysis project for analyzing data-related jobs (Data Analyst, Data 
 
 
 
-![1024px-MySQL ff87215b43fd7292af172e2a5d9b844217262571](https://user-images.githubusercontent.com/119366006/218245092-a3c66c49-349d-44d4-a6d2-2aebef464d90.png)
-![62eb4e8a981f73001c2db143](https://user-images.githubusercontent.com/119366006/218245121-55e2c318-d95c-4387-a3b9-7929358f2a75.png | width=100)
+![MySQL](https://user-images.githubusercontent.com/119366006/218245302-e18ed6c2-c3a9-477b-84ad-5e1abfa05970.png)
+![Tableau](https://user-images.githubusercontent.com/119366006/218245315-44b9e552-90fd-4d89-860b-65661bca8c5e.png)
 
 
