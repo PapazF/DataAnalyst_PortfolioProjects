@@ -14,3 +14,9 @@ MySQL data analysis project for exploring the publicly available [Airbnb dataset
 ### [Vancouver Business Licences](https://github.com/PapazF/PortfolioProjects/blob/main/Data%20Cleaning%20Project%20-%20Vancouver%20Business%20Licences.sql)
 
 MySQL data cleaning project for further analysis of publicly available [Vancouver Business Licences dataset](https://opendata.vancouver.ca/explore/?refine.theme=Business+and+economy&disjunctive.features&disjunctive.theme&disjunctive.keyword&disjunctive.data-owner&disjunctive.data-team&sort=modified)
+
+- standardize the date format
+- populate the missing values
+- breaking down the column into individual columns
+- cheking for duplicates
+- removing unused columns
