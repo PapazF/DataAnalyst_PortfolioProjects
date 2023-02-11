@@ -4,11 +4,7 @@
 
 MySQL data analysis project for exploring the publicly available Airbnb dataset to extract interesting insights about the city of Vancouver
 
-- gfdgdfg
-- fdgdfg
-dfg
-df
-g
-df
-gd
-fg
+- descriptive analysis of price (MIN,MAX,AVG,Standard deviation)
+- distribution of listing prices 
+- summary statistics about different neighbourhoods
+- most dominant property and room types
