@@ -20,3 +20,5 @@ MySQL data cleaning project for further analysis of publicly available [Vancouve
 - breaking down singe column into multiple columns
 - checking for duplicates
 - removing unused columns
+
+[Tableau Vancovuer Business Licences Project](https://public.tableau.com/app/profile/filip.papaz/viz/BusinessLicencesAnalysis-CityofVancovuer/FinalProject)
