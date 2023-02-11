@@ -107,4 +107,4 @@ ALTER TABLE business_licence
 DROP COLUMN UnitType;
 
 ALTER TABLE business_licence
-DROP COLUMN BusinessAddress;
+DROP COLUMN BusinessAddress;a
