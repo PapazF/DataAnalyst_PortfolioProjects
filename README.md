@@ -37,4 +37,5 @@ MySQL data analysis project for analyzing data-related jobs (Data Analyst, Data 
 
 
 
-!(https://d1.awsstatic.com/asset-repository/products/amazon-rds/1024px-MySQL.ff87215b43fd7292af172e2a5d9b844217262571.png)
+!(![1024px-MySQL ff87215b43fd7292af172e2a5d9b844217262571](https://user-images.githubusercontent.com/119366006/218245092-a3c66c49-349d-44d4-a6d2-2aebef464d90.png))
+
