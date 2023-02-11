@@ -26,3 +26,11 @@ MySQL data cleaning project for further analysis of publicly available [Vancouve
 ## [Job Market Project](https://github.com/PapazF/PortfolioProjects/blob/main/Job%20Market%20Analysis%20in%20field%20of%20Data%20with%20Tableau%20skills.sql)
 
 MySQL data analysis project for analyzing data-related jobs (Data Analyst, Data Scientist, Data Science Manager, Data Engineer) with knowledge of Tableau
+
+-  number of job postings and number of applicants for each job title
+-  average number of years of experience for each position level
+-  number of job postings and number of applicants per industry
+-  summary statistics for each job title
+-  tableau vs power bi 
+
+[Tableau Job Market Project](https://public.tableau.com/app/profile/filip.papaz/viz/TableauFocusedJobsAnalysis/JobAnalytics)
