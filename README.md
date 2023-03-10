@@ -21,7 +21,7 @@ MySQL data cleaning project for further analysis of publicly available [Vancouve
 - checking for duplicates
 - removing unused columns
 
-[Tableau Vancouver Business Licences Project](https://public.tableau.com/app/profile/filip.papaz/viz/BusinessLicencesAnalysis-CityofVancovuer/FinalProject)
+[Tableau Vancouver Business Licences Project](https://public.tableau.com/app/profile/filip.papaz/viz/BusinessLicencesAnalysis-CityofVancovuer/Final)
 
 ## [Job Market Project](https://github.com/PapazF/PortfolioProjects/blob/main/Job%20Market%20Analysis%20in%20field%20of%20Data%20with%20Tableau%20skills.sql)
 
