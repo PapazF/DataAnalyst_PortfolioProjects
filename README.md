@@ -23,7 +23,7 @@ MySQL data cleaning project for further analysis of publicly available [Vancouve
 
 ## [Film Rental Store Project](https://github.com/PapazF/DataAnalyst_PortfolioProjects/blob/main/Film%20Rental%20Store%20Project.sql)
 
-MySQL data analysis project in helping Film Rental Store to discover customer/business insights, measure and track marketing efforts.
+MySQL data analysis project in helping Film Rental Store to discover customer/business insights, measure and track marketing efforts. </br>
 Key Questions:
 
 - which movies contributed the most/least to revenue gain
@@ -34,7 +34,7 @@ Key Questions:
 
 ## [Job Market Project](https://github.com/PapazF/PortfolioProjects/blob/main/Job%20Market%20Analysis%20in%20field%20of%20Data%20with%20Tableau%20skills.sql)
 
-MySQL data analysis project for analyzing data-related jobs (Data Analyst, Data Scientist, Data Science Manager, Data Engineer) with knowledge of Tableau
+MySQL data analysis project for analyzing data-related jobs Data Analyst, Data Scientist, Data Science Manager, Data Engineer with knowledge of Tableau
 
 -  number of job postings and number of applicants for each job title
 -  average number of years of experience for each position level
