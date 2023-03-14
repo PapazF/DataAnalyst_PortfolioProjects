@@ -21,6 +21,8 @@ MySQL data cleaning project for further analysis of publicly available [Vancouve
 - checking for duplicates
 - removing unused columns
 
+## [Film Rental Store Project](https://github.com/PapazF/DataAnalyst_PortfolioProjects/blob/main/Film%20Rental%20Store%20Project.sql)
+
 
 ## [Job Market Project](https://github.com/PapazF/PortfolioProjects/blob/main/Job%20Market%20Analysis%20in%20field%20of%20Data%20with%20Tableau%20skills.sql)
 
