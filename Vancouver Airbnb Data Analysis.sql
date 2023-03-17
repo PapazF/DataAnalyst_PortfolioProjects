@@ -111,12 +111,3 @@ FROM airbnb_vancouver;
 	Neighborhoods with the highest average prices are the Downtown area, Kitsilano, West Point Grey, and Arbutus Ridge. 
 	The number of listings were dominated by Downtown-area.
 */
-
-    
-
-
-
-
-
-
-	
